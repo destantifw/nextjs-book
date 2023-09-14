@@ -1,9 +1,10 @@
-const { GoogleSpreadsheet } = require('google-spreadsheet');
-
-const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
+import useSheet from 'google-spreadsheet';
 
 export default async function handler(req, res) {
   const guest = req.body
+  const [GoogleSpreadsheet] = useSheet();
+
+  const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
 
   try {
     await doc.useServiceAccountAuth({

@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { animate, stagger } from 'motion';
+import React, { useEffect, useState } from 'react';
+// import { animate, stagger } from 'motion';
 
 // import TheNewStackLogo from '../components/the-new-stack-logo';
 
